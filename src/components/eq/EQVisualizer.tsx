@@ -58,6 +58,25 @@ export default function EQVisualizer({ bands, height = 72, animate = true, class
                   transition: mounted ? `height 0.4s cubic-bezier(0.34,1.56,0.64,1) ${i * 30}ms, opacity 0.3s ease ${i * 30}ms` : undefined,
                 }}
               />
+              {/* Gain value label on bar */}
+              {Math.abs(band.gain) > 0.5 && (
+                <text
+                  x={x + barW / 2}
+                  y={band.gain >= 0 ? y - 4 : y + barH + 10}
+                  textAnchor="middle"
+                  fontSize={9}
+                  fontWeight="600"
+                  fill={band.gain > 0 ? "#9b7ff5" : "#f57b9b"}
+                  fontFamily="'DM Mono', monospace"
+                  opacity={mounted && animate ? 0.9 : 0}
+                  style={{
+                    transition: mounted ? `opacity 0.3s ease ${i * 30 + 100}ms` : undefined,
+                  }}
+                >
+                  {band.gain > 0 ? '+' : ''}{band.gain.toFixed(1)}
+                </text>
+              )}
+              {/* Frequency label */}
               <text
                 x={x + barW / 2}
                 y={height + 14}
