@@ -1,0 +1,42 @@
+{
+  "filename": "README.md",
+  "path": "README.md",
+  "version": "1.1",
+  "files": {
+    "b52dd0b1": {
+      "value": [
+        {
+          "programming_language": "TypeScript",
+          "fileName": "seed.ts",
+          "relativeFilePath": "scripts/seed.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            140
+          ]
+        },
+        {
+          "programming_language": "",
+          "fileName": ".env.local",
+          "relativeFilePath": ".env.local",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            5
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "d43373b3": {
+      "value": "database has been created on supabase, and filled data from seed.ts, so rmove the dependency of index.ts data file now and create api routes files methods to access the data and show accordingly,"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}

@@ -1,0 +1,170 @@
+{
+  "src/data/index.ts": {
+    "filename": "index.ts",
+    "path": "src/data/index.ts",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "567af1": {
+        "user": "Shubham Sharma",
+        "model": "gpt-4.1",
+        "timestamp": 1781101903,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "d43373b3",
+          "files": "b52dd0b1"
+        },
+        "hash": "120e5b38",
+        "messageId": "system_1e8568e0-64d4-11f1-8795-c7b69e79a360",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Shubham Sharma\n- **model**: gpt-4.1\n- **timestamp**: 10/06/2026, 20:01:43\n- **source**: agent\n- **type**: agentEditTool\n"
+      },
+      "6f2fc3": {
+        "user": "Shubham Sharma",
+        "model": "gpt-4.1",
+        "timestamp": 1781101903,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.5.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {
+          "promptMessage": "d43373b3",
+          "files": "b52dd0b1"
+        },
+        "hash": "a08bc4c9",
+        "messageId": "system_1e8568e0-64d4-11f1-8795-c7b69e79a360",
+        "codeBlockId": null,
+        "isActive": true,
+        "hoverData": "\n### Slingshot Generated Code\n\n- **user**: Shubham Sharma\n- **model**: gpt-4.1\n- **timestamp**: 10/06/2026, 20:01:43\n- **source**: agent\n- **type**: agentEditTool\n"
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6f2fc3",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "6f2fc3",
+        "hash": "a014f901",
+        "encoded": "*%20DEPRECATED:%20This%20file%20is%20no%20longer%20used%20for%20data%20storage.",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "6f2fc3",
+        "hash": "a8270933",
+        "encoded": "*%20Data%20is%20now%20stored%20in%20Supabase%20and%20accessed%20via%20API%20routes.",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "6f2fc3",
+        "hash": "b47f7c0a",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "6f2fc3",
+        "hash": "c2d7549f",
+        "encoded": "*%20This%20file%20is%20kept%20only%20for%20SIGNATURE_LABELS%20and%20FREQ_LABELS%20exports.",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "6f2fc3",
+        "hash": "e593c2db",
+        "encoded": "*%20All%20DEVICES%20and%20PRESETS%20data%20should%20be%20fetched%20from:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "6f2fc3",
+        "hash": "a4f10220",
+        "encoded": "*%20-%20API:%20/api/devices,%20/api/presets",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "6f2fc3",
+        "hash": "dbc281c5",
+        "encoded": "*%20-%20Server:%20import%20%7B%20getAllDevices,%20getAllPresets%20%7D%20from%20'@/lib/db'",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "6f2fc3",
+        "hash": "11d7e9e0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6f2fc3",
+        "hash": "b736b76a",
+        "encoded": "import%20type%20%7B%20Device,%20Preset%20%7D%20from%20%22@/types%22;",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "6f2fc3",
+        "hash": "e8340b27",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "6f2fc3",
+        "hash": "7f37cc32",
+        "encoded": "//%20DEPRECATED:%20Use%20API%20routes%20or%20database%20functions%20instead",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "6f2fc3",
+        "hash": "c513c52e",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "6f2fc3",
+        "hash": "8f5a4603",
+        "encoded": "/**%20@deprecated%20Use%20getAllDevices()%20from%20@/lib/db%20or%20fetch%20from%20/api/devices%20*/",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "6f2fc3",
+        "hash": "d3d24dfc",
+        "encoded": "export%20const%20DEVICES:%20Device%5B%5D%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "567af1",
+        "hash": "5bf6af0e",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "567af1",
+        "hash": "fc42940e",
+        "encoded": "//%20DEPRECATED:%20Use%20API%20routes%20or%20database%20functions%20instead",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "567af1",
+        "hash": "479acaf9",
+        "encoded": "//%20%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80%E2%94%80",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "567af1",
+        "hash": "b6c72bf9",
+        "encoded": "/**%20@deprecated%20Use%20getAllPresets()%20from%20@/lib/db%20or%20fetch%20from%20/api/presets%20*/",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "567af1",
+        "hash": "961df523",
+        "encoded": "export%20const%20PRESETS:%20Preset%5B%5D%20=%20%5B",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

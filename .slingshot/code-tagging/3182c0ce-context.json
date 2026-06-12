@@ -1,0 +1,229 @@
+{
+  "filename": "database.ts",
+  "path": "src/types/database.ts",
+  "version": "1.1",
+  "files": {
+    "a030e33c": {
+      "value": [
+        {
+          "programming_language": "TypeScript",
+          "fileName": "route.ts",
+          "relativeFilePath": "src/app/api/devices/[id]/route.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            31
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "route.ts",
+          "relativeFilePath": "src/app/api/devices/route.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            20
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "route.ts",
+          "relativeFilePath": "src/app/api/presets/[id]/route.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            31
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "route.ts",
+          "relativeFilePath": "src/app/api/presets/route.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            27
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "page.tsx",
+          "relativeFilePath": "src/app/browse/page.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            202
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "page.tsx",
+          "relativeFilePath": "src/app/devices/page.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            39
+          ]
+        },
+        {
+          "programming_language": "CSS",
+          "fileName": "globals.css",
+          "relativeFilePath": "src/app/globals.css",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            48
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "layout.tsx",
+          "relativeFilePath": "src/app/layout.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            29
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "page.tsx",
+          "relativeFilePath": "src/app/page.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            107
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "DeviceCard.tsx",
+          "relativeFilePath": "src/components/eq/DeviceCard.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            48
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "EQVisualizer.tsx",
+          "relativeFilePath": "src/components/eq/EQVisualizer.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            78
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "PresetCard.tsx",
+          "relativeFilePath": "src/components/eq/PresetCard.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            110
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "Navbar.tsx",
+          "relativeFilePath": "src/components/layout/Navbar.tsx",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            38
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "index.ts",
+          "relativeFilePath": "src/data/index.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            1218
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "db.ts",
+          "relativeFilePath": "src/lib/db.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            204
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "supabase.ts",
+          "relativeFilePath": "src/lib/supabase.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            19
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "utils.ts",
+          "relativeFilePath": "src/lib/utils.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            7
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "database.ts",
+          "relativeFilePath": "src/types/database.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            100
+          ]
+        },
+        {
+          "programming_language": "TypeScript",
+          "fileName": "index.ts",
+          "relativeFilePath": "src/types/index.ts",
+          "startLine": [
+            1
+          ],
+          "endLine": [
+            49
+          ]
+        }
+      ]
+    }
+  },
+  "promptMessage": {
+    "eb4c2478": {
+      "value": "You are working on EQVault — a Next.js 15 app with Supabase as the database.\nFix the following 7 issues exactly as described. Do not refactor anything beyond\nwhat is listed. Do not add new features. Do not change file structure.\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nCONTEXT — types you must not change\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nsrc/types/index.ts — Device type has NO priceINR field:\n\n  export type Device = {\n    id: string;\n    name: str"
+    }
+  },
+  "localPrompts": {},
+  "remotePrompts": {},
+  "figma": {},
+  "jira": {}
+}
