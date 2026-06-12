@@ -50,6 +50,9 @@ Thumbs.db
 # Supabase
 .supabase/
 
+# Slingshot
+.slingshot/
+
 # Logs
 logs
 *.log
