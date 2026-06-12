@@ -92,12 +92,12 @@ export default async function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-bg-border px-6 py-8 max-w-6xl mx-auto flex items-center justify-between">
+      <footer className="border-t border-bg-border px-6 py-8 max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-brand" />
           <span className="font-bold text-[14px] tracking-tight">EQVault</span>
         </div>
-        <p className="text-[11px] font-mono text-text-muted">
+        <p className="text-[11px] font-mono text-text-muted text-center md:text-left">
           Open-source EQ preset platform · Built for audiophiles
         </p>
       </footer>
