@@ -16,13 +16,15 @@ export default function EQVisualizer({ bands, height = 72, animate = true, class
 
   const gains = bands.map((b) => b.gain);
   const maxAbs = Math.max(...gains.map(Math.abs), 3);
-  const mid = height / 2;
+  const labelPadding = 16; // Space for labels above/below bars
+  const mid = height / 2 + labelPadding;
+  const totalHeight = height + labelPadding * 2 + 16; // Add padding top/bottom + freq labels
 
   return (
     <div className={cn("w-full", className)}>
       <svg
         width="100%"
-        viewBox={`0 0 ${bands.length * 28} ${height + 16}`}
+        viewBox={`0 0 ${bands.length * 28} ${totalHeight}`}
         preserveAspectRatio="none"
         aria-label="EQ curve visualization"
       >
@@ -79,7 +81,7 @@ export default function EQVisualizer({ bands, height = 72, animate = true, class
               {/* Frequency label */}
               <text
                 x={x + barW / 2}
-                y={height + 14}
+                y={height + labelPadding * 2 + 14}
                 textAnchor="middle"
                 fontSize={8}
                 fill="rgba(232,230,240,0.28)"

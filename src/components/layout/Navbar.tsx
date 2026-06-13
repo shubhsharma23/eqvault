@@ -16,8 +16,8 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-6 text-[13px] text-text-secondary font-medium">
           <Link href="/browse" className="hover:text-text-primary transition-colors">Browse</Link>
           <Link href="/devices" className="hover:text-text-primary transition-colors">Devices</Link>
-          <Link href="/compare" className="hover:text-text-primary transition-colors">Compare</Link>
-          <Link href="/community" className="hover:text-text-primary transition-colors">Community</Link>
+          <button disabled className="text-text-muted/50 cursor-not-allowed">Compare</button>
+          <button disabled className="text-text-muted/50 cursor-not-allowed">Community</button>
         </nav>
 
         <div className="flex items-center gap-3">
