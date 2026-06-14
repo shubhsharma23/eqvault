@@ -1,0 +1,103 @@
+{
+  "app": {
+    "name": "EQVault",
+    "tagline": "EQ Preset Platform",
+    "hero": {
+      "title": "Make your buds sound like anything.",
+      "titleHighlight": "anything.",
+      "description": "Discover, copy, and share equalizer presets for every TWS earphone. Tune your Enco Air to sound like Sony XM5. Zero guesswork."
+    },
+    "footer": {
+      "description": "Open-source EQ preset platform · Built for audiophiles"
+    },
+    "stats": {
+      "presets": {
+        "label": "Presets"
+      },
+      "devices": {
+        "label": "Devices"
+      },
+      "communityVotes": {
+        "label": "Community votes"
+      }
+    }
+  },
+  "navigation": {
+    "browse": "Browse",
+    "devices": "Devices",
+    "compare": "Compare",
+    "community": "Community"
+  },
+  "buttons": {
+    "browsePresets": "Browse Presets",
+    "viewDevices": "View Devices",
+    "submitPreset": "Submit Preset",
+    "viewAll": "View all",
+    "allDevices": "All devices",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "clearFilters": "Clear filters",
+    "clearAll": "Clear all",
+    "search": "Search"
+  },
+  "sections": {
+    "topPresets": "Top Presets",
+    "popularDevices": "Popular Devices",
+    "featuredPresets": "Featured Presets"
+  },
+  "pages": {
+    "browse": {
+      "title": "Browse Presets",
+      "resultsCount": "presets found",
+      "noResults": "No presets match your filters.",
+      "filters": {
+        "soundSignature": "Sound Signature",
+        "device": "Device",
+        "tags": "Tags",
+        "allSignatures": "All signatures",
+        "allDevices": "All devices"
+      }
+    },
+    "devices": {
+      "title": "Devices",
+      "subtitle": "earphones with EQ presets",
+      "of": "of",
+      "noDevicesFound": "No devices found",
+      "tryAdjustingFilters": "Try adjusting your filters",
+      "filters": {
+        "filterByBrand": "Filter by Brand",
+        "filterBySignature": "Filter by Sound Signature",
+        "allBrands": "All Brands",
+        "allSignatures": "All Signatures",
+        "activeFilters": "Active filters:",
+        "brand": "Brand:",
+        "signature": "Signature:"
+      }
+    }
+  },
+  "presetCard": {
+    "targets": "Targets:",
+    "by": "by"
+  },
+  "deviceCard": {
+    "presetsCount": "presets"
+  },
+  "soundSignatures": {
+    "neutral": "Neutral",
+    "vShaped": "V-Shaped",
+    "bassHeavy": "Bass Heavy",
+    "warm": "Warm",
+    "bright": "Bright",
+    "midForward": "Mid Forward",
+    "uShaped": "U-Shaped"
+  },
+  "deviceTypes": {
+    "tws": "TWS",
+    "iems": "IEM",
+    "overEar": "Over-Ear",
+    "onEar": "On-Ear"
+  },
+  "aria": {
+    "search": "Search"
+  }
+}

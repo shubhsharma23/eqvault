@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import DeviceCard from "@/components/eq/DeviceCard";
 import { getAllDevices } from "@/lib/db";
 import { cn } from "@/lib/utils";
+import { PAGE_LABELS, BUTTON_LABELS } from "@/data/labels";
 
 const SIGNATURE_STYLES: Record<string, { pill: string; label: string }> = {
   "neutral":     { pill: "text-emerald-400 bg-emerald-400/10 border-emerald-400/20", label: "Neutral" },
@@ -42,9 +43,9 @@ export default async function DevicesPage({
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-extrabold tracking-tight mb-1">Devices</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight mb-1">{PAGE_LABELS.devices.title}</h1>
           <p className="text-text-secondary text-[14px]">
-            {devices.length} of {allDevices.length} earphones with EQ presets
+            {devices.length} {PAGE_LABELS.devices.of} {allDevices.length} {PAGE_LABELS.devices.subtitle}
           </p>
         </div>
 
@@ -53,7 +54,7 @@ export default async function DevicesPage({
           <div className="flex items-center gap-2 mb-3">
             <Filter size={14} className="text-text-muted" />
             <h2 className="text-[12px] font-mono text-text-muted tracking-[1px] uppercase">
-              Filter by Brand
+              {PAGE_LABELS.devices.filters.filterByBrand}
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -66,7 +67,7 @@ export default async function DevicesPage({
                   : "bg-transparent text-text-muted border-bg-border hover:text-text-primary hover:border-text-muted"
               )}
             >
-              All Brands ({allDevices.length})
+              {PAGE_LABELS.devices.filters.allBrands} ({allDevices.length})
             </Link>
             {brands.map((brand) => {
               const count = allDevices.filter((d) => d.brand === brand).length;
@@ -96,7 +97,7 @@ export default async function DevicesPage({
           <div className="flex items-center gap-2 mb-3">
             <Filter size={14} className="text-text-muted" />
             <h2 className="text-[12px] font-mono text-text-muted tracking-[1px] uppercase">
-              Filter by Sound Signature
+              {PAGE_LABELS.devices.filters.filterBySignature}
             </h2>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -109,7 +110,7 @@ export default async function DevicesPage({
                   : "bg-transparent text-text-muted border-bg-border hover:text-text-primary hover:border-text-muted"
               )}
             >
-              All Signatures
+              {PAGE_LABELS.devices.filters.allSignatures}
             </Link>
             {signatures.map((sig) => {
               const st = SIGNATURE_STYLES[sig];
@@ -140,10 +141,10 @@ export default async function DevicesPage({
           <div className="mb-6 p-4 bg-bg-card border border-bg-border rounded-card">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-[12px] font-mono text-text-muted">Active filters:</span>
+                <span className="text-[12px] font-mono text-text-muted">{PAGE_LABELS.devices.filters.activeFilters}</span>
                 {activeBrand && (
                   <span className="text-[11px] font-mono px-2.5 py-1 rounded-full bg-brand/15 text-brand border border-brand/30">
-                    Brand: {activeBrand}
+                    {PAGE_LABELS.devices.filters.brand} {activeBrand}
                   </span>
                 )}
                 {activeSignature && (
@@ -151,7 +152,7 @@ export default async function DevicesPage({
                     "text-[11px] font-mono px-2.5 py-1 rounded-full border capitalize",
                     SIGNATURE_STYLES[activeSignature]?.pill
                   )}>
-                    Signature: {SIGNATURE_STYLES[activeSignature]?.label ?? activeSignature}
+                    {PAGE_LABELS.devices.filters.signature} {SIGNATURE_STYLES[activeSignature]?.label ?? activeSignature}
                   </span>
                 )}
               </div>
@@ -159,7 +160,7 @@ export default async function DevicesPage({
                 href="/devices"
                 className="text-[11px] font-mono text-text-muted hover:text-text-primary transition-colors"
               >
-                Clear all
+                {BUTTON_LABELS.clearAll}
               </Link>
             </div>
           </div>
@@ -168,13 +169,13 @@ export default async function DevicesPage({
         {/* Devices Grid */}
         {devices.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-bg-border rounded-card">
-            <p className="text-[14px] font-medium text-text-secondary">No devices found</p>
-            <p className="text-[12px] font-mono text-text-muted mt-1">Try adjusting your filters</p>
+            <p className="text-[14px] font-medium text-text-secondary">{PAGE_LABELS.devices.noDevicesFound}</p>
+            <p className="text-[12px] font-mono text-text-muted mt-1">{PAGE_LABELS.devices.tryAdjustingFilters}</p>
             <Link
               href="/devices"
               className="mt-4 inline-block text-[12px] font-bold bg-brand hover:bg-brand-dark text-white px-4 py-2 rounded-lg transition-colors"
             >
-              Clear filters
+              {BUTTON_LABELS.clearFilters}
             </Link>
           </div>
         ) : (

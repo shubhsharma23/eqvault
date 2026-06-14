@@ -5,6 +5,7 @@ import type { SoundSignature, Device, Preset } from "@/types";
 import { cn } from "@/lib/utils";
 import { getAllDevices, getAllPresets } from "@/lib/db";
 import Link from "next/link";
+import { PAGE_LABELS } from "@/data/labels";
 
 export default async function BrowsePage({
   searchParams,
@@ -35,8 +36,8 @@ export default async function BrowsePage({
       <Navbar />
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16">
         <div className="mb-8">
-          <h1 className="text-3xl font-extrabold tracking-tight mb-1">Browse Presets</h1>
-          <p className="text-text-secondary text-[14px]">{filtered.length} presets found</p>
+          <h1 className="text-3xl font-extrabold tracking-tight mb-1">{PAGE_LABELS.browse.title}</h1>
+          <p className="text-text-secondary text-[14px]">{filtered.length} {PAGE_LABELS.browse.resultsCount}</p>
         </div>
 
         <div className="flex gap-8">
@@ -45,7 +46,7 @@ export default async function BrowsePage({
             <div className="sticky top-20 flex flex-col gap-6">
               {/* Sound signature */}
               <div>
-                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">Sound Signature</p>
+                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">{PAGE_LABELS.browse.filters.soundSignature}</p>
                 <div className="flex flex-col gap-1">
                   <Link
                     href="/browse"
@@ -54,7 +55,7 @@ export default async function BrowsePage({
                       !sig ? "bg-brand/15 text-brand" : "text-text-secondary hover:text-text-primary hover:bg-bg-card"
                     )}
                   >
-                    All signatures
+                    {PAGE_LABELS.browse.filters.allSignatures}
                   </Link>
                   {Object.entries(SIGNATURE_LABELS).map(([key, label]) => (
                     <Link
@@ -73,7 +74,7 @@ export default async function BrowsePage({
 
               {/* Device filter */}
               <div>
-                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">Device</p>
+                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">{PAGE_LABELS.browse.filters.device}</p>
                 <div className="flex flex-col gap-1">
                   <Link
                     href="/browse"
@@ -82,7 +83,7 @@ export default async function BrowsePage({
                       !device ? "bg-brand/15 text-brand" : "text-text-secondary hover:text-text-primary hover:bg-bg-card"
                     )}
                   >
-                    All devices
+                    {PAGE_LABELS.browse.filters.allDevices}
                   </Link>
                   {devices.map((d) => (
                     <Link
@@ -101,7 +102,7 @@ export default async function BrowsePage({
 
               {/* Tags */}
               <div>
-                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">Tags</p>
+                <p className="font-mono text-[10px] text-text-muted tracking-[1.5px] uppercase mb-2">{PAGE_LABELS.browse.filters.tags}</p>
                 <div className="flex flex-wrap gap-1.5">
                   {allTags.map((t) => (
                     <Link
@@ -126,7 +127,7 @@ export default async function BrowsePage({
           <div className="flex-1 min-w-0">
             {filtered.length === 0 ? (
               <div className="text-center py-16 text-text-muted">
-                <p className="font-mono text-[13px]">No presets match your filters.</p>
+                <p className="font-mono text-[13px]">{PAGE_LABELS.browse.noResults}</p>
               </div>
             ) : (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
