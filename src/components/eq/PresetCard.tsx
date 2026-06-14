@@ -4,6 +4,7 @@ import { ThumbsUp, Copy, Check, Tag } from "lucide-react";
 import type { Preset } from "@/types";
 import EQVisualizer from "./EQVisualizer";
 import { presetToGeneric, cn } from "@/lib/utils";
+import { PRESET_CARD_LABELS, BUTTON_LABELS } from "@/data/labels";
 
 type Props = {
   preset: Preset;
@@ -64,7 +65,7 @@ export default function PresetCard({ preset, deviceName }: Props) {
       {/* Target */}
       <div className="flex items-center gap-1.5 text-[11px] text-brand font-mono">
         <Tag size={10} />
-        <span>Targets: {preset.targetSound}</span>
+        <span>{PRESET_CARD_LABELS.targets} {preset.targetSound}</span>
       </div>
 
       {/* Tags */}
@@ -80,8 +81,8 @@ export default function PresetCard({ preset, deviceName }: Props) {
       </div>
 
       {/* Footer */}
-      <div className="flex items-center justify-between pt-1 border-t border-bg-border mt-auto">
-        <span className="text-[11px] text-text-muted font-mono">by {preset.author}</span>
+      <div className="flex items-center justify-between pt-2 border-t border-bg-border mt-auto">
+        <span className="text-[11px] text-text-muted font-mono">{PRESET_CARD_LABELS.by} {preset.author}</span>
         <div className="flex items-center gap-2">
           <button
             onClick={handleUpvote}
@@ -100,7 +101,7 @@ export default function PresetCard({ preset, deviceName }: Props) {
             className="flex items-center gap-1 text-[11px] font-mono px-2.5 py-1 rounded-full bg-bg-border text-text-muted hover:bg-brand/10 hover:text-brand transition-all"
           >
             {copied ? <Check size={10} /> : <Copy size={10} />}
-            {copied ? "Copied!" : "Copy"}
+            {copied ? BUTTON_LABELS.copied : BUTTON_LABELS.copy}
           </button>
         </div>
       </div>

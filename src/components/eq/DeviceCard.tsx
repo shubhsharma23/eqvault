@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Headphones, ChevronRight } from "lucide-react";
 import type { Device } from "@/types";
 import { cn } from "@/lib/utils";
+import { SOUND_SIGNATURE_LABELS, DEVICE_TYPE_LABELS, DEVICE_CARD_LABELS } from "@/data/labels";
 
 type Props = { device: Device };
 
@@ -15,27 +16,31 @@ const SIGNATURE_COLORS: Record<string, string> = {
   "u-shaped":   "text-indigo-400",
 };
 
-const SIGNATURE_LABELS: Record<string, string> = {
-  "neutral":     "Neutral",
-  "v-shaped":    "V-Shaped",
-  "bass-heavy":  "Bass Heavy",
-  "warm":        "Warm",
-  "bright":      "Bright",
-  "mid-forward": "Mid Forward",
-  "u-shaped":    "U-Shaped",
+// Map signature keys to label keys
+const SIGNATURE_KEY_MAP: Record<string, keyof typeof SOUND_SIGNATURE_LABELS> = {
+  "neutral":     "neutral",
+  "v-shaped":    "vShaped",
+  "bass-heavy":  "bassHeavy",
+  "warm":        "warm",
+  "bright":      "bright",
+  "mid-forward": "midForward",
+  "u-shaped":    "uShaped",
 };
 
-const TYPE_LABELS: Record<string, string> = {
-  tws:        "TWS",
-  iems:       "IEM",
-  "over-ear": "Over-Ear",
-  "on-ear":   "On-Ear",
+// Map device type keys to label keys
+const TYPE_KEY_MAP: Record<string, keyof typeof DEVICE_TYPE_LABELS> = {
+  tws:        "tws",
+  iems:       "iems",
+  "over-ear": "overEar",
+  "on-ear":   "onEar",
 };
 
 export default function DeviceCard({ device }: Props) {
   const sigColor = SIGNATURE_COLORS[device.defaultSignature] ?? "text-text-muted";
-  const sigLabel = SIGNATURE_LABELS[device.defaultSignature] ?? device.defaultSignature;
-  const typeLabel = TYPE_LABELS[device.type] ?? device.type;
+  const sigLabelKey = SIGNATURE_KEY_MAP[device.defaultSignature];
+  const sigLabel = sigLabelKey ? SOUND_SIGNATURE_LABELS[sigLabelKey] : device.defaultSignature;
+  const typeLabelKey = TYPE_KEY_MAP[device.type];
+  const typeLabel = typeLabelKey ? DEVICE_TYPE_LABELS[typeLabelKey] : device.type;
 
   return (
     <Link
@@ -62,7 +67,7 @@ export default function DeviceCard({ device }: Props) {
 
       {/* Right */}
       <div className="shrink-0 text-right">
-        <p className="text-[12px] font-mono text-brand">{device.presetCount} presets</p>
+        <p className="text-[12px] font-mono text-brand">{device.presetCount} {DEVICE_CARD_LABELS.presetsCount}</p>
         <ChevronRight
           size={14}
           className="text-text-muted mt-1 ml-auto group-hover:text-brand transition-colors"

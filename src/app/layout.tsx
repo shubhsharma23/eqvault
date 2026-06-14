@@ -2,14 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "EQVault — EQ Presets for Every Earphone",
-  description:
-    "Discover, copy, and share equalizer presets for every TWS earphone. Make your buds sound like anything.",
-  keywords: ["EQ presets", "equalizer", "TWS", "earphones", "audiophile", "sound tuning"],
-  openGraph: {
-    title: "EQVault",
-    description: "Make your buds sound like anything.",
-    siteName: "EQVault",
+  title: "EQVault",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/icon-180x180.png",
   },
 };
 

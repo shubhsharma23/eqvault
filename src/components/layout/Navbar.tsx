@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Search } from "lucide-react";
+import { APP_LABELS, NAV_LABELS, BUTTON_LABELS, ARIA_LABELS } from "@/data/labels";
 
 export default function Navbar() {
   return (
@@ -9,26 +10,26 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span className="w-2 h-2 rounded-full bg-brand" />
           <span className="font-bold text-[17px] tracking-tight text-text-primary">
-            EQVault
+            {APP_LABELS.name}
           </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-[13px] text-text-secondary font-medium">
-          <Link href="/browse" className="hover:text-text-primary transition-colors">Browse</Link>
-          <Link href="/devices" className="hover:text-text-primary transition-colors">Devices</Link>
-          <button disabled className="text-text-muted/50 cursor-not-allowed">Compare</button>
-          <button disabled className="text-text-muted/50 cursor-not-allowed">Community</button>
+          <Link href="/browse" className="hover:text-text-primary transition-colors">{NAV_LABELS.browse}</Link>
+          <Link href="/devices" className="hover:text-text-primary transition-colors">{NAV_LABELS.devices}</Link>
+          <button disabled className="text-text-muted/50 cursor-not-allowed">{NAV_LABELS.compare}</button>
+          <button disabled className="text-text-muted/50 cursor-not-allowed">{NAV_LABELS.community}</button>
         </nav>
 
         <div className="flex items-center gap-3">
           <button
-            aria-label="Search"
+            aria-label={ARIA_LABELS.search}
             className="w-8 h-8 flex items-center justify-center rounded-lg text-text-muted hover:text-text-primary hover:bg-bg-card transition-all"
           >
             <Search size={16} />
           </button>
           <button className="text-[12px] font-bold bg-brand hover:bg-brand-dark text-white px-4 py-1.5 rounded-full transition-colors">
-            Submit Preset
+            {BUTTON_LABELS.submitPreset}
           </button>
         </div>
       </div>
